@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess ML Algorithm</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('/static/n.png') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 500px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input[type="file"], select {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        #output {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Chess ML Algorithm</h1>
+        <form id="chessForm" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" required>
+            <select name="turn" required>
+                <option value="" disabled selected>Whose turn?</option>
+                <option value="white">White</option>
+                <option value="black">Black</option>
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="output"></div>
+    </div>
+
+    <script>
+        const form = document.getElementById('chessForm');
+        const outputDiv = document.getElementById('output');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const response = await fetch('/process', {
+                method: 'POST',
+                body: formData,
+            });
+            const data = await response.json();
+            if (data.fen) {
+                outputDiv.innerText = `Best move: ${data.fen}`;
+            } else {
+                outputDiv.innerText = `Error: ${data.error}`;
+            }
+        });
+    </script>
+</body>
+</html>

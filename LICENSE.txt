@@ -1,0 +1,23 @@
+Copyright (c) 2024 LovejeetM
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and 
+associateddocumentation files (the "Software"), to use, copy, and modify the Software for personal 
+and non-commercial purposes only, subject to the following conditions:
+
+Non-Commercial Use Only:
+This software is licensed for personal and educational use only. Commercial use, including selling, 
+licensing, or otherwise exploiting the Software or its derivatives for profit, is strictly prohibited.
+
+Modifications:
+Modifications to the Software are allowed for personal use. However, the modified Software must retain 
+this license and may not be distributed for commercial purposes.
+
+Acknowledgment:
+The above copyright notice and this permission notice shall be included in all copies or substantial 
+portions of the Software, including modifications.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT 
+LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. 
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, 
+WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE 
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
